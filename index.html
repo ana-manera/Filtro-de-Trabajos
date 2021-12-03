@@ -1,82 +1,99 @@
-s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-    />
-    <!-- de Bulma-->
-    <title>Frontend Mentor | Job Listings</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      body{ 
-        font-size: 15px;
-        background-color:#EFFAFA;
-      } 
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-      .box { margin: 3% 0 ;}
-    </style>
-  </head>
-  <body>
-    <header style="background-color:#5BA4A4;">
-      <img
-        src="../Filtros de Trabajos/images/bg-header-desktop.svg"
-        alt="header"
-      />
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <!-- de Bulma-->
+  <title>Frontend Mentor | Job Listings</title>
 
-    <div class="caja padre body" style="margin: 0% 5%; border: red 3px solid;"> 
-      <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
-        <!-- Item Start -->
-        <!-- Item Imagen -->
-        <div class="is-flex is-flex-direction-row" style="border: pink 3px solid">
-          <figure class="image is-64x64">
-            <img src="../Filtros de Trabajos/images/photosnap.svg">
-          </figure>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      font-size: 15px;
+      overflow: hidden;
+      background-color: #EFFAFA;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .box {
+      margin: 3% 0;
+    }
+    @media (max-width: 800px){
+      .box{
+        display: flex;
+        flex-direction: column;
         
-          <!-- Item titulo -->
-          <div class="is-flex is-flex-direction-column ml-3" style="border: blue 3px solid">
-            <div class="is-flex is-flex-direction-row" style="border: yellow 3px solid" >
-              <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">Photosnap</span> 
-              <div class="tags  ml-3" style="border: chocolate 3px solid">
-                <span class="tag is-uppercase"style="background-color: #5BA4A4; color: white;" >New!</span>
-                <span class="tag is-black is-uppercase">Featured </span>
-              </div>
-            </div >
+      }
+      .tags{
+        margin-top: 2%;
+      }
+    }
+    @media (max-width: 400px){
+      .border{
+        margin-top:3%;
+        padding-top: 3%;
+        border-top: rgba(128, 128, 128, 0.555) solid 1px;
+      }
+      .med{
+        display: none;
+      }
+    }
+  </style>
+</head>
 
-            <p class="is-size-7 has-text-weight-bold	">Senior Frontend Developer </p>
-            <p class="is-size-7 has-text-weight-light">1d ago   Full Time  USA only </p>
+<body>
+  <header style="background-color:#5BA4A4;">
+    <img src="./images/bg-header-desktop.svg" alt="header" />
+  </header>
+
+  <div class="caja padre body" style="margin: 0% 5%;">
+    <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
+      <!-- Item Start -->
+      <!-- Item Imagen -->
+      <div class=" is-flex is-flex-direction-row" >
+        <figure class="image is-64x64">
+          <img src="./images/photosnap.svg">
+        </figure>
+
+        <!-- Item titulo -->
+        <div class="is-flex is-flex-direction-column ml-3" >
+          <div class="is-flex is-flex-direction-row" >
+            <span class="is-size-7 has-text-weight-bold" >Photosnap</span>
+            <div class="med tags  ml-3" >
+              <span class="tag is-uppercase" style="background-color: #5BA4A4; color: white;">New!</span>
+              <span class="tag is-black is-uppercase">Featured </span>
+            </div>
           </div>
+
+          <p class="is-size-7 has-text-weight-bold	">Senior Frontend Developer </p>
+          <p class="is-size-7 has-text-weight-light">1d ago  •  Full Time  •  USA only </p>
         </div>
-        <div class="tags is-pulled-right "style="border: purple 3px solid">
-           <!-- Role -->
-           <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
-           <!-- Level -->
-           <span class="tag  is-primary is-light has-text-weight-medium">Senior</span>
-          <!-- Languages -->
-          <span class="tag  is-primary is-light has-text-weight-medium">HTML </span> 
-          <span class="tag  is-primary is-light has-text-weight-medium">CSS </span> 
-          <span class="tag  is-primary is-light has-text-weight-medium"> JavaScript </span>  
-         
-      
-         <!-- Item End -->
-        </div>
+      </div>
+      <div class="border tags is-pulled-right " >
+        <!-- Role -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
+        <!-- Level -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Senior</span>
+        <!-- Languages -->
+        <span class="tag  is-primary is-light has-text-weight-medium">HTML </span>
+        <span class="tag  is-primary is-light has-text-weight-medium">CSS </span>
+        <span class="tag  is-primary is-light has-text-weight-medium"> JavaScript </span>
+
+
+        <!-- Item End -->
+      </div>
     </div>
 
     <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
@@ -84,351 +101,351 @@ s<!DOCTYPE html>
       <!-- Item Imagen -->
       <div class="is-flex is-flex-direction-row" style="border: pink 3px solid">
         <figure class="image is-64x64">
-          <img src="../Filtros de Trabajos/images/manage.svg">
+          <img src="./images/manage.svg">
         </figure>
-      
+
         <!-- Item titulo -->
         <div class="is-flex is-flex-direction-column ml-3" style="border: blue 3px solid">
-          <div class="is-flex is-flex-direction-row" style="border: yellow 3px solid" >
-            <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">Manage</span> 
-            <div class="tags  ml-3" style="border: chocolate 3px solid">
-              <span class="tag is-uppercase"style="background-color: #5BA4A4; color: white;" >New!</span>
+          <div class="is-flex is-flex-direction-row" style="border: yellow 3px solid">
+            <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">Manage</span>
+            <div class="med tags  ml-3" style="border: chocolate 3px solid">
+              <span class="tag is-uppercase" style="background-color: #5BA4A4; color: white;">New!</span>
               <span class="tag is-black is-uppercase">Featured </span>
             </div>
-          </div >
+          </div>
 
           <p class="is-size-7 has-text-weight-bold	">Fullstack Developer </p>
-          <p class="is-size-7 has-text-weight-light">1d ago Part Time Remote</p>
+          <p class="is-size-7 has-text-weight-light">1d ago  •  Part Time  •  Remote</p>
         </div>
       </div>
-      <div class="tags is-pulled-right "style="border: purple 3px solid">
-         <!-- Role -->
-         <span class="tag  is-primary is-light has-text-weight-medium">Fullstack</span>
-         <!-- Level -->
-         <span class="tag  is-primary is-light has-text-weight-medium">Midweight</span>
-         <!-- Languages -->
-        <span class="tag  is-primary is-light has-text-weight-medium">Python </span> 
-        <span class="tag  is-primary is-light has-text-weight-medium"> React </span>  
-       
-    
-       <!-- Item End -->
-      </div>
-  </div>
+      <div class="border tags is-pulled-right " style="border: purple 3px solid">
+        <!-- Role -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Fullstack</span>
+        <!-- Level -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Midweight</span>
+        <!-- Languages -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Python </span>
+        <span class="tag  is-primary is-light has-text-weight-medium"> React </span>
 
-  <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
-    <!-- Item Start -->
-    <!-- Item Imagen -->
-    <div class="is-flex is-flex-direction-row" style="border: pink 3px solid">
-      <figure class="image is-64x64">
-        <img src="../Filtros de Trabajos/images/account.svg">
-      </figure>
-    
-      <!-- Item titulo -->
-      <div class="is-flex is-flex-direction-column ml-3" style="border: blue 3px solid">
-        <div class="is-flex is-flex-direction-row" style="border: yellow 3px solid" >
-          <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">Account</span> 
-          <div class="tags  ml-3" style="border: chocolate 3px solid">
-            <span class="tag is-uppercase"style="background-color: #5BA4A4; color: white;" >New!</span>
-          </div>
-        </div >
+
+        <!-- Item End -->
+      </div>
+    </div>
+
+    <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;" >
+      <!-- Item Start -->
+      <!-- Item Imagen -->
+      <div class="is-flex is-flex-direction-row" >
+        <figure class="image is-64x64">
+          <img src="./images/account.svg">
+        </figure>
+
         <!-- Item titulo -->
-        <p class="is-size-7 has-text-weight-bold	"> Junior Frontend Developer </p>
-        <p class="is-size-7 has-text-weight-light"> 2d ago Part Time USA only</p>
+        <div class="is-flex is-flex-direction-column ml-3" >
+          <div class="is-flex is-flex-direction-row" >
+            <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">Account</span>
+            <div class="med tags  ml-3" >
+              <span class="tag is-uppercase" style="background-color: #5BA4A4; color: white;">New!</span>
+            </div>
+          </div>
+          <!-- Item titulo -->
+          <p class="is-size-7 has-text-weight-bold	"> Junior Frontend Developer </p>
+          <p class="is-size-7 has-text-weight-light"> 2d ago  •  Part Time  •  USA only</p>
+        </div>
+      </div>
+      <div class="border tags is-pulled-right ">
+        <!-- Role -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
+        <!-- Level -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
+        <!-- Languages -->
+        <span class="tag  is-primary is-light has-text-weight-medium">React </span>
+        <span class="tag  is-primary is-light has-text-weight-medium"> Sass </span>
+        <span class="tag  is-primary is-light has-text-weight-medium"> JavaScript </span>
+
+
+        <!-- Item End -->
       </div>
     </div>
-    <div class="tags is-pulled-right "style="border: purple 3px solid">
-       <!-- Role -->
-       <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
-       <!-- Level -->
-       <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
-       <!-- Languages -->
-      <span class="tag  is-primary is-light has-text-weight-medium">React </span> 
-      <span class="tag  is-primary is-light has-text-weight-medium"> Sass </span> 
-      <span class="tag  is-primary is-light has-text-weight-medium"> JavaScript </span>  
-      
-  
-     <!-- Item End -->
-    </div>
-</div> 
 
-<div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
-  <!-- Item Start -->
-  <!-- Item Imagen -->
-  <div class="is-flex is-flex-direction-row" style="border: pink 3px solid">
-    <figure class="image is-64x64">
-      <img src="../Filtros de Trabajos/images/myhome.svg">
-    </figure>
-  
-    <!-- Item titulo -->
-    <div class="is-flex is-flex-direction-column ml-3" style="border: blue 3px solid">
-      <div class="is-flex is-flex-direction-row" style="border: yellow 3px solid" >
-        <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">MyHome</span> 
-      </div >
-      <!-- Item titulo -->
-      <p class="is-size-7 has-text-weight-bold	"> Junior Frontend Developer </p>
-      <p class="is-size-7 has-text-weight-light"> 5d ago Contract USA only</p>
-    </div>
-  </div>
-  <div class="tags is-pulled-right "style="border: purple 3px solid">
-     <!-- Role -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
-     <!-- Level -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
-     <!-- Languages -->
-    <span class="tag  is-primary is-light has-text-weight-medium"> CSS </span> 
-    <span class="tag  is-primary is-light has-text-weight-medium"> JavaScript </span>  
-   
+    <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
+      <!-- Item Start -->
+      <!-- Item Imagen -->
+      <div class="is-flex is-flex-direction-row">
+        <figure class="image is-64x64">
+          <img src="./images/myhome.svg">
+        </figure>
 
-   <!-- Item End -->
-  </div>
-</div>
+        <!-- Item titulo -->
+        <div class="is-flex is-flex-direction-column ml-3">
+          <div class="is-flex is-flex-direction-row" >
+            <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">MyHome</span>
+          </div>
+          <!-- Item titulo -->
+          <p class="is-size-7 has-text-weight-bold	"> Junior Frontend Developer </p>
+          <p class="is-size-7 has-text-weight-light"> 5d ago  •  Contract  •  USA only</p>
+        </div>
+      </div>
+      <div class="border tags is-pulled-right ">
+        <!-- Role -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
+        <!-- Level -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
+        <!-- Languages -->
+        <span class="tag  is-primary is-light has-text-weight-medium"> CSS </span>
+        <span class="tag  is-primary is-light has-text-weight-medium"> JavaScript </span>
 
 
-<div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
-  <!-- Item Start -->
-  <!-- Item Imagen -->
-  <div class="is-flex is-flex-direction-row" style="border: pink 3px solid">
-    <figure class="image is-64x64">
-      <img src="../Filtros de Trabajos/images/loop-studios.svg">
-    </figure>
-  
-    <!-- Item titulo -->
-    <div class="is-flex is-flex-direction-column ml-3" style="border: blue 3px solid">
-      <div class="is-flex is-flex-direction-row" style="border: yellow 3px solid" >
-        <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">Loop Studios</span> 
-      </div >
-      <!-- Item titulo -->
-      <p class="is-size-7 has-text-weight-bold	"> Software Engineer </p>
-      <p class="is-size-7 has-text-weight-light"> 1w ago Full Time Worldwide</p>
-    </div>
-  </div>
-  <div class="tags is-pulled-right "style="border: purple 3px solid">
-     <!-- Role -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Fullstack</span>
-     <!-- Level -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Midweight</span>
-     <!-- Languages -->
-    <span class="tag  is-primary is-light has-text-weight-medium">JavaScript</span> 
-    <span class="tag  is-primary is-light has-text-weight-medium"> Sass </span> 
-    <span class="tag  is-primary is-light has-text-weight-medium"> Ruby </span>  
-    
-
-   <!-- Item End -->
-  </div>
-</div> 
-
-<div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
-  <!-- Item Start -->
-  <!-- Item Imagen -->
-  <div class="is-flex is-flex-direction-row" style="border: pink 3px solid">
-    <figure class="image is-64x64">
-      <img src="../Filtros de Trabajos/images/faceit.svg">
-    </figure>
-  
-    <!-- Item titulo -->
-    <div class="is-flex is-flex-direction-column ml-3" style="border: blue 3px solid">
-      <div class="is-flex is-flex-direction-row" style="border: yellow 3px solid" >
-        <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">FaceIt</span> 
-      </div >
-      <!-- Item titulo -->
-      <p class="is-size-7 has-text-weight-bold	"> Junior Backend Developer </p>
-      <p class="is-size-7 has-text-weight-light"> 2w ago Full Time UK only</p>
-    </div>
-  </div>
-  <div class="tags is-pulled-right "style="border: purple 3px solid">
-     <!-- Role -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Backend</span>
-     <!-- Level -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
-     <!-- Languages -->
-    <span class="tag  is-primary is-light has-text-weight-medium"> Ruby </span> 
-    <span class="tag  is-primary is-light has-text-weight-medium"> RoR </span>  
-   
-
-   <!-- Item End -->
-  </div>
-</div>
-
-
-<div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
-  <!-- Item Start -->
-  <!-- Item Imagen -->
-  <div class="is-flex is-flex-direction-row" style="border: pink 3px solid">
-    <figure class="image is-64x64">
-      <img src="../Filtros de Trabajos/images/shortly.svg">
-    </figure>
-  
-    <!-- Item titulo -->
-    <div class="is-flex is-flex-direction-column ml-3" style="border: blue 3px solid">
-      <div class="is-flex is-flex-direction-row" style="border: yellow 3px solid" >
-        <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">Shortly</span> 
-      </div >
-      <!-- Item titulo -->
-      <p class="is-size-7 has-text-weight-bold	"> Junior Developer </p>
-      <p class="is-size-7 has-text-weight-light"> 2w ago Full Time Worldwide</p>
-    </div>
-  </div>
-  <div class="tags is-pulled-right "style="border: purple 3px solid">
-     <!-- Role -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
-     <!-- Level -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
-     <!-- Languages -->
-    <span class="tag  is-primary is-light has-text-weight-medium"> HTML </span> 
-    <span class="tag  is-primary is-light has-text-weight-medium"> Sass </span>  
-    <span class="tag  is-primary is-light has-text-weight-medium">JavaScript </span>  
-   
-
-   <!-- Item End -->
-  </div>
-</div>
-
-<div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
-  <!-- Item Start -->
-  <!-- Item Imagen -->
-  <div class="is-flex is-flex-direction-row" style="border: pink 3px solid">
-    <figure class="image is-64x64">
-      <img src="../Filtros de Trabajos/images/insure.svg">
-    </figure>
-  
-    <!-- Item titulo -->
-    <div class="is-flex is-flex-direction-column ml-3" style="border: blue 3px solid">
-      <div class="is-flex is-flex-direction-row" style="border: yellow 3px solid" >
-        <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">Insurey</span> 
-      </div >
-      <!-- Item titulo -->
-      <p class="is-size-7 has-text-weight-bold	"> Junior Frontend Developer </p>
-      <p class="is-size-7 has-text-weight-light"> 2w ago Full Time USA only</p>
-    </div>
-  </div>
-  <div class="tags is-pulled-right "style="border: purple 3px solid">
-     <!-- Role -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
-     <!-- Level -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
-     <!-- Languages -->
-    <span class="tag  is-primary is-light has-text-weight-medium">Vue </span> 
-    <span class="tag  is-primary is-light has-text-weight-medium">JavaScript </span>  
-    <span class="tag  is-primary is-light has-text-weight-medium"> Sass </span>  
-    
-   
-
-   <!-- Item End -->
-  </div>
-</div>
-
-
-<div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
-  <!-- Item Start -->
-  <!-- Item Imagen -->
-  <div class="is-flex is-flex-direction-row" style="border: pink 3px solid">
-    <figure class="image is-64x64">
-      <img src="../Filtros de Trabajos/images/eyecam-co.svg">
-    </figure>
-  
-    <!-- Item titulo -->
-    <div class="is-flex is-flex-direction-column ml-3" style="border: blue 3px solid">
-      <div class="is-flex is-flex-direction-row" style="border: yellow 3px solid" >
-        <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">
-        Eyercam Co.</span> 
-      </div >
-      <!-- Item titulo -->
-      <p class="is-size-7 has-text-weight-bold	"> Full Stack Engineer </p>
-      <p class="is-size-7 has-text-weight-light"> 3w ago Full Time Worldwide</p>
-    </div>
-  </div>
-  <div class="tags is-pulled-right "style="border: purple 3px solid">
-     <!-- Role -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Fullstack</span>
-     <!-- Level -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Midweight</span>
-     <!-- Languages -->
-     <span class="tag  is-primary is-light has-text-weight-medium">JavaScript </span>  
-    <span class="tag  is-primary is-light has-text-weight-medium">Django </span> 
-    <span class="tag  is-primary is-light has-text-weight-medium">Python </span>  
-
-   <!-- Item End -->
-  </div>
-</div>
-
-
-<div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
-  <!-- Item Start -->
-  <!-- Item Imagen -->
-  <div class="is-flex is-flex-direction-row" style="border: pink 3px solid">
-    <figure class="image is-64x64">
-      <img src="../Filtros de Trabajos/images/the-air-filter-company.svg">
-    </figure>
-  
-    <!-- Item titulo -->
-    <div class="is-flex is-flex-direction-column ml-3" style="border: blue 3px solid">
-      <div class="is-flex is-flex-direction-row" style="border: yellow 3px solid" >
-        <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">The Air Filter Company</span> 
-      </div >
-      <!-- Item titulo -->
-      <p class="is-size-7 has-text-weight-bold	"> Front-end Dev </p>
-      <p class="is-size-7 has-text-weight-light"> 1mo ago Part Time Worldwide</p>
-    </div>
-  </div>
-  <div class="tags is-pulled-right "style="border: purple 3px solid">
-     <!-- Role -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
-     <!-- Level -->
-     <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
-     <!-- Languages -->
-    <span class="tag  is-primary is-light has-text-weight-medium">React </span> 
-    <span class="tag  is-primary is-light has-text-weight-medium"> Sass </span>  
-    <span class="tag  is-primary is-light has-text-weight-medium">JavaScript </span>  
-  
-   <!-- Item End -->
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- Item End -->
+      </div>
     </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+
+    <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
+      <!-- Item Start -->
+      <!-- Item Imagen -->
+      <div class="is-flex is-flex-direction-row" >
+        <figure class="image is-64x64">
+          <img src="./images/loop-studios.svg">
+        </figure>
+
+        <!-- Item titulo -->
+        <div class="is-flex is-flex-direction-column ml-3" >
+          <div class="is-flex is-flex-direction-row" >
+            <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">Loop Studios</span>
+          </div>
+          <!-- Item titulo -->
+          <p class="is-size-7 has-text-weight-bold	"> Software Engineer </p>
+          <p class="is-size-7 has-text-weight-light"> 1w ago  •  Full Time  •  Worldwide</p>
+        </div>
+      </div>
+      <div class="border tags is-pulled-right ">
+        <!-- Role -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Fullstack</span>
+        <!-- Level -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Midweight</span>
+        <!-- Languages -->
+        <span class="tag  is-primary is-light has-text-weight-medium">JavaScript</span>
+        <span class="tag  is-primary is-light has-text-weight-medium"> Sass </span>
+        <span class="tag  is-primary is-light has-text-weight-medium"> Ruby </span>
+
+
+        <!-- Item End -->
+      </div>
     </div>
-  </body>
+
+    <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
+      <!-- Item Start -->
+      <!-- Item Imagen -->
+      <div class="is-flex is-flex-direction-row">
+        <figure class="image is-64x64">
+          <img src="./images/faceit.svg">
+        </figure>
+
+        <!-- Item titulo -->
+        <div class="is-flex is-flex-direction-column ml-3">
+          <div class="is-flex is-flex-direction-row">
+            <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">FaceIt</span>
+          </div>
+          <!-- Item titulo -->
+          <p class="is-size-7 has-text-weight-bold	"> Junior Backend Developer </p>
+          <p class="is-size-7 has-text-weight-light"> 2w   •  Full Time  •  UK only</p>
+        </div>
+      </div>
+      <div class="border tags is-pulled-right ">
+        <!-- Role -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Backend</span>
+        <!-- Level -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
+        <!-- Languages -->
+        <span class="tag  is-primary is-light has-text-weight-medium"> Ruby </span>
+        <span class="tag  is-primary is-light has-text-weight-medium"> RoR </span>
+
+
+        <!-- Item End -->
+      </div>
+    </div>
+
+
+    <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
+      <!-- Item Start -->
+      <!-- Item Imagen -->
+      <div class=" is-flex is-flex-direction-row">
+        <figure class="image is-64x64">
+          <img src="./images/shortly.svg">
+        </figure>
+
+        <!-- Item titulo -->
+        <div class="is-flex is-flex-direction-column ml-3">
+          <div class="is-flex is-flex-direction-row" >
+            <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">Shortly</span>
+          </div>
+          <!-- Item titulo -->
+          <p class="is-size-7 has-text-weight-bold	"> Junior Developer </p>
+          <p class="is-size-7 has-text-weight-light"> 2w ago  •  Full Time  •  Worldwide</p>
+        </div>
+      </div>
+      <div class="border tags is-pulled-right ">
+        <!-- Role -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
+        <!-- Level -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
+        <!-- Languages -->
+        <span class="tag  is-primary is-light has-text-weight-medium"> HTML </span>
+        <span class="tag  is-primary is-light has-text-weight-medium"> Sass </span>
+        <span class="tag  is-primary is-light has-text-weight-medium">JavaScript </span>
+
+
+        <!-- Item End -->
+      </div>
+    </div>
+
+    <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
+      <!-- Item Start -->
+      <!-- Item Imagen -->
+      <div class="is-flex is-flex-direction-row">
+        <figure class="image is-64x64">
+          <img src="./images/insure.svg">
+        </figure>
+
+        <!-- Item titulo -->
+        <div class="is-flex is-flex-direction-column ml-3">
+          <div class="is-flex is-flex-direction-row">
+            <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">Insurey</span>
+          </div>
+          <!-- Item titulo -->
+          <p class="is-size-7 has-text-weight-bold	"> Junior Frontend Developer </p>
+          <p class="is-size-7 has-text-weight-light"> 2w ago  •  Full Time  •  USA only</p>
+        </div>
+      </div>
+      <div class="border tags is-pulled-right ">
+        <!-- Role -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
+        <!-- Level -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
+        <!-- Languages -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Vue </span>
+        <span class="tag  is-primary is-light has-text-weight-medium">JavaScript </span>
+        <span class="tag  is-primary is-light has-text-weight-medium"> Sass </span>
+
+
+
+        <!-- Item End -->
+      </div>
+    </div>
+
+
+    <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
+      <!-- Item Start -->
+      <!-- Item Imagen -->
+      <div class="is-flex is-flex-direction-row" >
+        <figure class="image is-64x64">
+          <img src="./images/eyecam-co.svg">
+        </figure>
+
+        <!-- Item titulo -->
+        <div class="is-flex is-flex-direction-column ml-3">
+          <div class="is-flex is-flex-direction-row">
+            <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">
+              Eyercam Co.</span>
+          </div>
+          <!-- Item titulo -->
+          <p class="is-size-7 has-text-weight-bold	"> Full Stack Engineer </p>
+          <p class="is-size-7 has-text-weight-light"> 3w ago  •  Full Time  •  Worldwide</p>
+        </div>
+      </div>
+      <div class="border tags is-pulled-right ">
+        <!-- Role -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Fullstack</span>
+        <!-- Level -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Midweight</span>
+        <!-- Languages -->
+        <span class="tag  is-primary is-light has-text-weight-medium">JavaScript </span>
+        <span class="tag  is-primary is-light has-text-weight-medium">Django </span>
+        <span class="tag  is-primary is-light has-text-weight-medium">Python </span>
+
+        <!-- Item End -->
+      </div>
+    </div>
+
+
+    <div class="box  is-flex is-justify-content-space-between " style="border-left: 7px hsl(180, 29%, 50%)  solid;">
+      <!-- Item Start -->
+      <!-- Item Imagen -->
+      <div class="is-flex is-flex-direction-row">
+        <figure class="image is-64x64">
+          <img src="./images/the-air-filter-company.svg">
+        </figure>
+
+        <!-- Item titulo -->
+        <div class="is-flex is-flex-direction-column ml-3" >
+          <div class="is-flex is-flex-direction-row">
+            <span class="is-size-7 has-text-weight-bold" style="color: #5BA4A4;">The Air Filter Company</span>
+          </div>
+          <!-- Item titulo -->
+          <p class="is-size-7 has-text-weight-bold	"> Front-end Dev </p>
+          <p class="is-size-7 has-text-weight-light"> 1mo ago  •  Part Time  •  Worldwide</p>
+        </div>
+      </div>
+      <div class="border tags is-pulled-right ">
+        <!-- Role -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Frontend</span>
+        <!-- Level -->
+        <span class="tag  is-primary is-light has-text-weight-medium">Junior</span>
+        <!-- Languages -->
+        <span class="tag  is-primary is-light has-text-weight-medium">React </span>
+        <span class="tag  is-primary is-light has-text-weight-medium"> Sass </span>
+        <span class="tag  is-primary is-light has-text-weight-medium">JavaScript </span>
+
+        <!-- Item End -->
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your
+      Name Here</a>.
+  </div>
+</body>
+
 </html>
